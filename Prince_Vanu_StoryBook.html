@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prince ❤️ Vanu | Our Story</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Georgia,serif;background:#f5efe6;color:#3b2a1f;overflow:hidden}
+.page{display:none;height:100vh;padding:40px;justify-content:center;align-items:center;flex-direction:column;text-align:center;background:linear-gradient(#f8f2ea,#efe1cf)}
+.page.active{display:flex;animation:fade .7s}
+.book{max-width:700px;background:#fffaf3;border-radius:14px;padding:35px;box-shadow:0 15px 40px rgba(0,0,0,.2)}
+h1{color:#a03c5a;margin-bottom:16px}
+p{font-size:20px;line-height:1.8}
+button{margin-top:25px;padding:12px 22px;border:none;border-radius:30px;background:#a03c5a;color:#fff;font-size:17px;cursor:pointer}
+.small{font-size:16px;color:#666;margin-top:10px}
+.counter{font-size:22px;color:#a03c5a;font-weight:bold;margin-top:18px}
+@keyframes fade{from{opacity:0;transform:rotateY(-12deg)}to{opacity:1;transform:none}}
+.heart{position:fixed;bottom:-20px;color:#e44;font-size:20px;animation:float 8s linear infinite}
+@keyframes float{to{transform:translateY(-110vh);opacity:0}}
+.photo{width:220px;height:220px;border:3px dashed #c99;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:18px auto;color:#777}
+</style>
+</head>
+<body>
+
+<div class="page active" id="p0">
+<div class="book">
+<h1>📖 Our Story</h1>
+<p><b>Prince ❤️ Vanu</b></p>
+<p>Happy 4 Beautiful Months</p>
+<div class="small">Tap below to open our story.</div>
+<button onclick="next()">Open Book 💖</button>
+</div>
+</div>
+
+<div class="page" id="p1">
+<div class="book">
+<h1>Chapter 1</h1>
+<p>Har kahani ki ek shuruaat hoti hai... aur meri favourite kahani <b>4 April</b> se shuru hui, jab tum meri life ka sabse khoobsurat hissa ban gayi.</p>
+<button onclick="next()">Next Page ➜</button>
+</div>
+</div>
+
+<div class="page" id="p2">
+<div class="book">
+<h1>Our Memories</h1>
+<div class="photo">📷 Replace with your photo</div>
+<p>Har call, har message, har hasi aur har chhoti si baat... sab meri favourite memories hain.</p>
+<button onclick="next()">Next Page ➜</button>
+</div>
+</div>
+
+<div class="page" id="p3">
+<div class="book">
+<h1>4 Months ❤️</h1>
+<p>Ye sirf 4 months nahi... meri life ke sabse special din hain. Thank you Vanu, meri life me aane ke liye.</p>
+<div class="counter" id="count"></div>
+<button onclick="next()">Last Page ➜</button>
+</div>
+</div>
+
+<div class="page" id="p4">
+<div class="book">
+<h1>Forever ❤️</h1>
+<p><b>Happy 4 Months, Vanu.</b><br><br>
+Main har din tumhe choose karunga. Thank you for every smile, every memory, and every moment. I love you. ❤️<br><br>
+— <b>Prince</b></p>
+</div>
+</div>
+
+<script>
+let i=0,pages=document.querySelectorAll(".page");
+function next(){pages[i].classList.remove("active");i=Math.min(i+1,pages.length-1);pages[i].classList.add("active");}
+const start=new Date("2026-04-04");
+function upd(){
+ let d=Math.floor((Date.now()-start)/86400000);
+ document.getElementById("count").textContent="Together for "+d+" days ❤️";
+}
+upd();setInterval(upd,60000);
+setInterval(()=>{
+ let h=document.createElement("div");
+ h.className="heart";
+ h.innerHTML="❤";
+ h.style.left=Math.random()*100+"vw";
+ h.style.animationDuration=(5+Math.random()*5)+"s";
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),9000);
+},350);
+</script>
+</body>
+</html>
