@@ -51,7 +51,7 @@ pages[current].classList.add("active");
 
 // Relationship Timer
 
-const startDate = new Date("2026-04-04");
+const startDate = new Date("2026-04-09");
 
 function updateTimer(){
 
