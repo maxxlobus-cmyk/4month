@@ -2,39 +2,148 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prince ❤️ Vanu | Our Story</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Georgia,serif;background:#f5efe6;color:#3b2a1f;overflow:hidden}
-.page{display:none;height:100vh;padding:40px;justify-content:center;align-items:center;flex-direction:column;text-align:center;background:linear-gradient(#f8f2ea,#efe1cf)}
-.page.active{display:flex;animation:fade .7s}
-.book{max-width:700px;background:#fffaf3;border-radius:14px;padding:35px;box-shadow:0 15px 40px rgba(0,0,0,.2)}
-h1{color:#a03c5a;margin-bottom:16px}
-p{font-size:20px;line-height:1.8}
-button{margin-top:25px;padding:12px 22px;border:none;border-radius:30px;background:#a03c5a;color:#fff;font-size:17px;cursor:pointer}
-.small{font-size:16px;color:#666;margin-top:10px}
-.counter{font-size:22px;color:#a03c5a;font-weight:bold;margin-top:18px}
-@keyframes fade{from{opacity:0;transform:rotateY(-12deg)}to{opacity:1;transform:none}}
-.heart{position:fixed;bottom:-20px;color:#e44;font-size:20px;animation:float 8s linear infinite}
-@keyframes float{to{transform:translateY(-110vh);opacity:0}}
-.photo{width:220px;height:220px;border:3px dashed #c99;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:18px auto;color:#777}
-</style>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="page active" id="p0">
-<div class="book">
-<h1>📖 Our Story</h1>
-<p><b>Prince ❤️ Vanu</b></p>
-<p>Happy 4 Beautiful Months</p>
-<div class="small">Tap below to open our story.</div>
-<button onclick="next()">Open Book 💖</button>
-</div>
+<div class="loading">
+<h1>Our Story ❤️</h1>
+<p>Loading Beautiful Memories...</p>
 </div>
 
-<div class="page" id="p1">
+<section id="cover">
+
+<div class="stars"></div>
+
 <div class="book">
+
+<h1>Prince ❤️ Vanu</h1>
+
+<p>
+Happy 4 Beautiful Months
+</p>
+
+<button id="openBook">
+Open Our Story
+</button>
+
+</div>
+
+</section>
+
+<section id="story">
+
+<div class="page active">
+
+<h2>Chapter 1</h2>
+
+<p>
+
+Every love story begins with a moment...
+
+Ours began on
+<b>4 April</b>.
+
+The day my world slowly became brighter.
+
+</p>
+
+<button class="next">
+Next →
+</button>
+
+</div>
+
+<div class="page">
+
+<h2>Chapter 2</h2>
+
+<img src="images/1.jpg">
+
+<p>
+
+Your smile became my favourite place.
+
+Every call.
+
+Every message.
+
+Every little moment.
+
+Everything became special.
+
+</p>
+
+<button class="next">
+Next →
+</button>
+
+</div>
+
+<div class="page">
+
+<h2>Chapter 3</h2>
+
+<img src="images/2.jpg">
+
+<p>
+
+Sometimes love isn't about perfect moments.
+
+It's about finding your peace inside someone.
+
+Thank you Vanu.
+
+</p>
+
+<button class="next">
+Next →
+</button>
+
+</div>
+
+<div class="page">
+
+<h2>Happy 4 Months ❤️</h2>
+
+<div id="timer"></div>
+
+<p>
+
+Thank you for every smile.
+
+Every memory.
+
+Every hug.
+
+Every laugh.
+
+I love you forever.
+
+— Prince ❤️
+
+</p>
+
+</div>
+
+</section>
+
+<audio id="music" loop>
+
+<source src="music.mp3" type="audio/mp3">
+
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html><div class="book">
 <h1>Chapter 1</h1>
 <p>Har kahani ki ek shuruaat hoti hai... aur meri favourite kahani <b>4 April</b> se shuru hui, jab tum meri life ka sabse khoobsurat hissa ban gayi.</p>
 <button onclick="next()">Next Page ➜</button>
