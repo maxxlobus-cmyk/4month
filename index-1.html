@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 4 Months ❤️</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#ffb6c1,#ffd6e8,#fff);display:flex;justify-content:center;align-items:center;height:100vh;overflow:hidden}
+#hearts{position:fixed;inset:0;pointer-events:none}
+.heart{position:absolute;color:#ff4d6d;animation:float 8s linear infinite}
+@keyframes float{0%{transform:translateY(100vh);opacity:0}30%{opacity:1}100%{transform:translateY(-120px);opacity:0}}
+.envelope{width:250px;height:160px;background:#ff4d6d;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;font-weight:bold;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+#letter{display:none;background:#fff;padding:30px;border-radius:18px;max-width:700px;max-height:80vh;overflow:auto;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+h1{color:#ff3366}p{line-height:1.8;color:#444}.counter{text-align:center;color:#ff3366;font-weight:bold;margin-top:20px}
+</style>
+</head>
+<body>
+<div id="hearts"></div>
+<div id="box">
+<div class="envelope" id="env" onclick="openLetter()">💌 Open My Heart</div>
+<div id="letter">
+<h1>Happy 4 Months ❤️</h1>
+<p>
+Aaj hamare relationship ko pure <b>4 months</b> ho gaye. ❤️<br><br>
+Ye sirf 4 mahine nahi, meri life ke sabse beautiful moments rahe hain.
+Har smile, har call, har message aur har yaad mere liye bahut special hai.
+Thank you meri life me aane ke liye. Tu meri happiness, meri peace aur meri favourite person hai.
+Bas itna chahta hu ki ye 4 months ek din 4 years aur phir poori zindagi me badal jaye.
+I love you endlessly. ❤️
+</p>
+<div class="counter" id="time"></div>
+</div>
+</div>
+<script>
+function openLetter(){
+document.getElementById('env').style.display='none';
+document.getElementById('letter').style.display='block';
+}
+const start=new Date("2026-03-08");
+function upd(){
+let d=Math.floor((Date.now()-start)/86400000);
+document.getElementById("time").innerHTML="❤️ Together for "+d+" Days";
+}
+upd();setInterval(upd,60000);
+setInterval(()=>{
+let h=document.createElement("div");
+h.className="heart";h.innerHTML="❤";
+h.style.left=Math.random()*100+"%";
+h.style.top="100%";
+h.style.fontSize=(15+Math.random()*20)+"px";
+h.style.animationDuration=(5+Math.random()*5)+"s";
+document.getElementById("hearts").appendChild(h);
+setTimeout(()=>h.remove(),9000);
+},300);
+</script>
+</body>
+</html>
