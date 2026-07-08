@@ -137,41 +137,24 @@ box-shadow:
 }
 
 #story{
-
-display:none;
-
-min-height:100vh;
-
-padding:70px 25px;
-
-background:#0e0e17;
-
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+padding:20px;
 }
 
 .page{
-
 display:none;
-
-max-width:850px;
-
-margin:auto;
-
-padding:45px;
-
-border-radius:22px;
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.12);
-
-animation:fade .8s;
-
+position:absolute;
+width:90%;
+max-width:750px;
 }
 
 .page.active{
 display:block;
+animation:fade .6s ease;
 }
 
 @keyframes fade{
